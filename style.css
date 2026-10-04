@@ -258,6 +258,50 @@ button .fas {
   color: #003c71;
 }
 
+#winnerMessage {
+  display: none;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: #fff3cd;
+  color: #856404;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 18px;
+  opacity: 0.9;
+  animation-name: confetti-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+  }
+}
+
 /* Counter */
 #attendeeCount {
   color: #0071c5;
@@ -342,10 +386,43 @@ select {
   background-color: #fff7ed;
 }
 
+.team-card.winning-team {
+  outline: 4px solid #ffc20e;
+  box-shadow: 0 0 20px rgba(255, 194, 14, 0.8);
+}
+
 .team-name {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+.attendee-list {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.attendee-name {
+  padding: 6px 8px;
+  margin: 4px 0 0;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.water-attendee {
+  color: #005a9e;
+  background-color: #d8f3fc;
+}
+
+.zero-attendee {
+  color: #166534;
+  background-color: #d9fbe5;
+}
+
+.power-attendee {
+  color: #9a3412;
+  background-color: #ffedd5;
 }
 
 /* Mobile responsive */
